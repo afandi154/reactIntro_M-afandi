@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App input={prompt("Masukan nama anda")}/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
