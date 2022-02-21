@@ -2,20 +2,28 @@ import React, { Component } from 'react'
 import { ListContainer } from './style'
 
 export default class List extends Component {
-  currentItem = null;
-  data = this.props.data;
+  state = {
+    data: this.props.data,
+    currentItem: null,
+    color: "#FFDDFF"
+  }
   render() {
     return (
-      <ListContainer onClick={() => 
-        this.setItem(this.data)
-      }>
-        <p>{this.data.Nama}</p>
-        <p>{this.data.Harga}</p>
-      </ListContainer>
+      this.state.data.map((element, index) => {
+        return (
+          <ListContainer
+            color={this.state.color}
+            key={index}
+            onClick={()=>this.setItem(element)
+          }>
+            <p>{element.Nama}</p>
+            <p>{element.Harga}</p>
+          </ListContainer>
+        )
+      })
     )
   }
   setItem(data){
-    this.currentItem = data.Nama;
-    console.log(this.currentItem)
+    this.state.color = "gray"
   }
 }

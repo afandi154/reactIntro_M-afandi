@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 export const ListContainer = styled.button`
   width: 100%;
-  background-color: #FFDDFF;
+  background-color: ${({color}) => color};
   border: 1px solid blue;
   border-radius: 5px;
   display: flex;
