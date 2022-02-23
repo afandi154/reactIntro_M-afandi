@@ -8,29 +8,27 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-export const ListContainer = styled.button`
+export const ListContainer = styled.div`
   width: 100%;
-  background-color: ${({color}) => color};
+  background-color: #CCDDFF;
   border: 1px solid blue;
   border-radius: 5px;
   display: flex;
   font-size: 18px;
   font-weight: bold;
   justify-content: space-between;
+  align-items: center;
   padding: 1em;
   margin: 0.5em 0;
+`
+
+export const Buttons = styled.button`
+  width: 2em;
+  height: 2em;
 
   &:hover{
     cursor: pointer;
   }
-`
-
-export const Buttons = styled.button`
-  border: none;
-  background: blue;
-  color: white;
-  font-size: 30px;
-  padding: 0.3em 1.5em;
 `
 export const CounterContainer = styled.div`
   display: flex;
