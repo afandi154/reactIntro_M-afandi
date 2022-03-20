@@ -6,9 +6,11 @@ import { items } from './data';
 
 export default class App extends Component {
   totalHarga = {
-    value: 0
+    value: 0,
+    link: "https://newsapi.org/v2/everything?q=international&apiKey=f9d2f27f4a784cc7a1871946aafe7730"
   }
   render() {
+    console.log(this.totalHarga.link)
     return (
       <MainContent>
         <OutputBar totalHarga={this.totalHarga.value}/>
