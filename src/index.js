@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import App from './App';
+import Counter from './Redux/Counter';
+import { Provider } from 'react-redux';
+import store from './Redux/Features/store'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
