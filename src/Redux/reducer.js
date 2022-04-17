@@ -1,5 +1,5 @@
 let initialState = {
-  count: 0
+  total: 0
 }
 
 const counterReducer = (state = initialState, action) => {
@@ -7,15 +7,12 @@ const counterReducer = (state = initialState, action) => {
     case 'INCREMENT':
       return {
         ...state,
-        count: state.count + action.value
+        total: state.total + action.value
       }
     case 'DECREMENT':
-      return (state.count > 0)? {
+      return {
         ...state,
-        count: state.count - action.value
-      } : {
-        ...state,
-        count: 0
+        total: state.total - action.value
       }
     default:
       return state
